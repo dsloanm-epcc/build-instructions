@@ -11,7 +11,7 @@ Download and Unpack the GROMACS source code
 Download and unpack the source
 
 ```bash
-wget ...
+wget http://ftp.gromacs.org/pub/gromacs/gromacs-2016.3.tar.gz
 tar -xvf gromacs-2016.3.tar.gz
 ```
 
