@@ -78,7 +78,7 @@ Update Build script
 Edit the file Build, find the line:
 
 ```csh
-setenv GNUMAKE 'gnumake'
+setenv GNUMAKE 'gnumake -j8'
 ```
 
 and change this to:
