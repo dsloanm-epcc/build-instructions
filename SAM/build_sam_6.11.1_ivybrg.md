@@ -93,5 +93,6 @@ Compile the program
 Compile SAMS with:
 
 ```bash
+rm OBJ/*
 ./Build
 ```
