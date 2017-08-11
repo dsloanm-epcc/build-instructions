@@ -1,7 +1,7 @@
-SAMS
-====
+SAM
+===
 
-This folder contains files and documentation for building SAMS on ARCHER.
+This folder contains files and documentation for building SAM on ARCHER.
 
 History
 -------
