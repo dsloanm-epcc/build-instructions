@@ -17,3 +17,76 @@ tar -xvf sionlib-1.7.1.tar
 mv sionlib 1.7.1
 rm sionlib-1.7.1.tar
 ```
+
+Build and install SIONlib for GNU programming environment
+---------------------------------------------------------
+
+```bash
+module swap PrgEnv-cray PrgEnv-gnu
+./configure --prefix=$HOME/sionlib/1.7.1/install/gnu
+
+cd build-crayxt-gnu
+
+make 2>&1 | tee make.log
+make install
+```
+
+Build and install Position Independent Code (PIC) variant
+---------------------------------------------------------
+
+```bash
+cd ..
+cp -r build-crayxt-gnu build-crayxt-gnu-pic
+cd build-crayxt-gnu-pic
+```
+
+For all PREFIX definitions within Makefile.defs.fe, Makefile.defs.be
+and configure.log append "-pic".
+
+Append "-fPIC" to the OPTFLAGS definitions in Makefile.defs.fe and
+Makefile.defs.be.
+
+```bash
+make clean
+make 2>&1 | tee make.log
+make install
+```
+
+Build and install CrayPAT-compatible version of PIC variant
+-----------------------------------------------------------
+
+```bash
+cd ..
+cp -r build-crayxt-gnu-pic build-crayxt-gnu-pic-pat
+cd build-crayxt-gnu-pic-pat
+
+module load perftools-base/7.0.0
+module load perftools/7.0.0
+```
+
+For all PREFIX definitions within Makefile.defs.fe, Makefile.defs.be
+and configure.log append "-pat".
+
+```bash
+make clean
+make 2>&1 | tee make.log
+make install
+```
+
+Repeat build and install steps for Intel programming environment
+----------------------------------------------------------------
+
+```bash
+module swap PrgEnv-gnu PrgEnv-intel
+```
+
+Repeat instructions replacing "gnu" with "intel."
+
+Repeat build and install steps for Cray programming environment
+---------------------------------------------------------------
+
+```bash
+module swap PrgEnv-intel PrgEnv-cray
+```
+
+Repeat instructions replacing "intel" with "cray".
