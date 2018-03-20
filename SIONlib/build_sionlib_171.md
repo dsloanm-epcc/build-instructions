@@ -71,6 +71,9 @@ and configure.log append "-pat".
 make clean
 make 2>&1 | tee make.log
 make install
+
+module unload perftools
+module unload perftools-base
 ```
 
 Repeat build and install steps for Intel programming environment
@@ -89,4 +92,5 @@ Repeat build and install steps for Cray programming environment
 module swap PrgEnv-intel PrgEnv-cray
 ```
 
-Repeat instructions replacing "intel" with "cray".
+Repeat instructions replacing "intel" with "cray", however
+"crayxt-intel" is instead replaced with "crayxt-cce".
