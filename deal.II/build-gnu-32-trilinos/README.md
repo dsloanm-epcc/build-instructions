@@ -11,12 +11,12 @@ optional packages:
 The short version:
 1. If you need to, download the source tarballs using the `download.sh` script
 1. Edit `env.sh` as follows:
-1.1. Name your configuration by setting `$config_name`.  This one is called `gnu-32-trilinos`.
-1.1. Choose the installation directory by setting `install_dir` (at least change `A99/A99/username`)
+   - Name your configuration by setting `$config_name`.  This one is called `gnu-32-trilinos`.
+   - Choose the installation directory by setting `install_dir` (at least change `A99/A99/username`)
 1. Change `A99-xacc` to your account name in the job scripts `build.pbs` and `test.pbs`
 1. Change the `Installed on` string in `package.sh`
 1. Run `master.sh`, which sources the other scripts in turn and submits a job to do the build.
-1. Once deal II is built (check the logs), run the tests using `qsub test.pbs`
+1. Once deal.II is built (check the logs), run the tests using `qsub test.pbs`
 1. If the tests pass (one will fail - that is normal), run `package.sh` to create a module to make using the library easier.  The modulefile is in the `build/modulefiles/deal_II` directory.
 
 ## download.sh
