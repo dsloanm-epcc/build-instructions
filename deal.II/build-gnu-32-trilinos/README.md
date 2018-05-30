@@ -6,6 +6,7 @@ optional packages:
 * LAPACK
 * METIS
 * MPI
+* p4est
 * Trilinos
 
 The short version:
