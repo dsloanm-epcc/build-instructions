@@ -4,7 +4,7 @@ Instructions for compiling Amber 16 for ARCHER using GCC 5 compilers
 We assume that you have obtained the Amber source code from the Amber website.
 
 __Note:__ As this is a dynamic build you should install Amber in the 
-`\work` file system on ARCHER so the required librarie s are available on 
+`/work` file system on ARCHER so the required librarie s are available on 
 the compute nodes at runtime.
 
 __Note:__ The whole build and install process should take a couple of 
@@ -65,7 +65,7 @@ export CRAYPE_LINK_TYPE=dynamic
 Configure Amber using the following parameters:
 
 ```bash
-./configure --with-netcdf /opt/cray/netcdf/4.3.3.1/GNU/51 -nomtkpp -crayxt5 -nofftw3 gnu
+./configure --with-netcdf $NETCDF_DIR -nomtkpp -crayxt5 -nofftw3 gnu
 ```
 
 Build and install:
@@ -119,7 +119,7 @@ Configure Amber using the following parameters:
 
 ```bash
 ./configure -mpi --with-python /work/y07/y07/cse/python/2.7.6/bin/python2.7 \
-   --with-netcdf /opt/cray/netcdf/4.3.3.1/GNU/51 -nomtkpp -crayxt5 -nofftw3 \
+   --with-netcdf $NETCDF_DIR -nomtkpp -crayxt5 -nofftw3 \
    gnu
 ```
 
